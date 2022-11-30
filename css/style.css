@@ -9,3 +9,31 @@
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+/* MAIN */
+main{
+    height: calc(100vh - 80px);
+    background-color:#141922;
+}
+
+header{
+    background-color: rgba(250, 0, 0, 0.3);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 200px;        
+    width: 100%;
+}
+
+aside{
+    background-color: black;
+    min-height: calc(100vh - 80px);
+    max-width: 200px;
+}
+
+/* FOOTER */
+
+footer{
+    height: 80px;
+    background-color: #282828;
+}
