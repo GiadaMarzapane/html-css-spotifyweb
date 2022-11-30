@@ -13,16 +13,19 @@ body{
 :root{
     --footer-color: #2d2d2d;
     --icon-color: #696c72;
+    --primary-font: 0.75rem;
 }
 
 /* MAIN */
 main{
     height: calc(100vh - 75px);
     background-color:#141922;
+    overflow-y: visible;
+    display: flex;
 }
 
 header{
-    background-color: rgba(250, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     height: 70px;
     position: fixed;
     top: 0;
@@ -46,14 +49,15 @@ header div{
     padding: 0.5rem 2rem;
     border-radius: 20px;
     font-size: 0.7rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-right: 3px;
 }
 
 aside{
+    display: inline-block;
     background-color: black;
     min-height: 100%;
-    max-width: 200px;
+    min-width: 200px;
     padding: 1rem;
 }
 
@@ -76,7 +80,7 @@ aside i,
 
 aside ul li a{
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: var(--primary-font);
 }
 
 aside h5{
@@ -107,7 +111,26 @@ aside h5{
     color: black;
     background-color: var(--icon-color);
     padding: 5px;
-    }
+}
+
+main section{
+    width: fit-content;
+    margin: 80px auto 0 auto;
+}
+
+section nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 0 0.5rem;
+}
+
+section nav ul li a{
+    color: var(--icon-color);
+    font-size: var(--primary-font);
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
 
 /* FOOTER */
 
