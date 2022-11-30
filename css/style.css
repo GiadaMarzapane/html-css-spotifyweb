@@ -10,9 +10,14 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+:root{
+    --footer-color: #2d2d2d;
+    --icon-color: #696c72;
+}
+
 /* MAIN */
 main{
-    height: calc(100vh - 80px);
+    height: calc(100vh - 75px);
     background-color:#141922;
 }
 
@@ -22,18 +27,91 @@ header{
     position: fixed;
     top: 0;
     left: 200px;        
-    width: 100%;
+    width: calc(100% - 200px);
+    z-index: 50;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex-direction: row-reverse;
+}
+
+#button{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-right: 3px;
 }
 
 aside{
     background-color: black;
-    min-height: calc(100vh - 80px);
+    min-height: 100%;
     max-width: 200px;
+    padding: 1rem;
 }
+
+aside div{
+    /* border: 1px dashed white; */
+    margin-bottom: 1rem;
+}
+
+aside img{
+    max-width: 120px;
+    margin-bottom: 1rem;
+}
+
+aside ul li a,
+aside i,
+#crea-playlist{
+    color: var(--icon-color);
+    font-weight: bold;
+}
+
+aside ul li a{
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+
+aside h5{
+    color: white;
+}
+
+aside ul li{
+    list-style: none;
+}
+
+aside ul li,
+aside h5,
+#crea-playlist{
+    padding-bottom: 0.4rem;
+}
+
+aside h5{
+    text-transform: uppercase;
+}
+
+#crea-playlist{
+    line-height: 35px;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.fa-plus{
+    color: black;
+    background-color: var(--icon-color);
+    padding: 5px;
+    }
 
 /* FOOTER */
 
 footer{
-    height: 80px;
-    background-color: #282828;
+    height: 75px;
+    background-color: var(--footer-color);
 }
