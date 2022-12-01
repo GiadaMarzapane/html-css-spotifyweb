@@ -279,12 +279,16 @@ footer div.flex{
     text-align: center;
 }
 
-/* #player{
-    flex-grow: 1;
-} */
+footer a{
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+div.text-left a{
+    margin: 0;
+}
 
 footer i{
-    margin: 0 0.3rem;
     color: white;
 }
 
@@ -299,6 +303,10 @@ footer div.flex div{
 
 footer i.fa-circle-play{
     margin: 0 0.8rem;
+}
+
+footer i.fa-circle-play.fa-2xl{
+    display: none;
 }
 
 #player{
@@ -355,17 +363,56 @@ div.text-left h6:first-child{
     color: white;
 }
 
-div.text-left h6:last-child {
+div.text-left a {
     color: var(--icon-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: var(--primary-font);
+}
+
+i.fa-circle{
+    display: none;
+    font-size: 7px;
+    position: absolute;
+    top: -2px;
+    right: 0px;
 }
 
 /* HOVER */
 
+#button:hover{
+    font-size: 0.8rem;
+}
+
 .aside-top ul li:hover i,
 .aside-top ul li:hover a,
 .aside-top #crea-playlist:hover,
+.aside-bottom #install:hover span,
 nav ul li:hover a{
     color: white;
+}
+
+div.text-left a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.fa-heart:hover,
+.fa-folder:hover{
+    color: white;
+}
+
+.fa-circle-play:hover{
+    font-size: 1.7rem;
+}
+
+#player-bar:hover div,
+#volume-bar:hover div{
+    background-color: rgb(84, 252, 84);
+}
+#player-bar:hover div i.fa-circle,
+#volume-bar:hover div i.fa-circle{
+    display: block;
 }
 
 /* MEDIA QUERY */
