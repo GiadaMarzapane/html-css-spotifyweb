@@ -445,6 +445,9 @@ div.text-left a:hover{
     .flex-right > *{
         width: 100%;
     }
+    #player span{
+        margin: 0 2px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -482,7 +485,6 @@ div.text-left a:hover{
         width: 40%;
     }
 
-    #player span,
     footer a,
     footer i.fa-circle-play{
         margin: 0 2px
