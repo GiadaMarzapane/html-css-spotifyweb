@@ -30,6 +30,10 @@ body{
     text-align: center;
 }
 
+.text-left {
+    text-align: left;
+}
+
 .white-color{
     color: white;
 }
@@ -46,16 +50,23 @@ main{
 aside{
     background-color: black;
     width: 200px;
-    padding: 1rem;
+    padding: 1rem 1rem 0;
     height: 100%;
     min-height: 400px;
+    flex-direction: column;
 }
 
-aside div{
+.aside-top{
+    /* height: calc(100% - 50px); */
+    flex-grow: 1;
+}
+
+.aside-top div{
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
-aside img{
+.aside-top img{
     max-width: 120px;
     margin-bottom: 1rem;
 }
@@ -103,11 +114,59 @@ aside h5{
     padding: 5px;
 }
 
+.aside-bottom{
+    height: 60px;
+}
+
+#install img{
+    width: 18px;
+    height: 18px;
+    filter: brightness(0.5);
+    vertical-align: middle;
+    object-fit: cover;
+}
+
+#install span{
+    color: var(--icon-color);
+    font-size: var(--primary-font);
+    font-weight: 600;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+#install{
+    border-bottom: 1.5px solid var(--icon-color);
+    padding-bottom: 3px;
+}
+
+#profile img {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--icon-color);
+    vertical-align: middle;
+}
+
+#profile{
+    padding-top: 3px;
+}
+
+
+#profile span {
+    font-size: 0.8rem;
+    color: white;
+    font-weight: 600;
+    line-height: 18px;
+    vertical-align: middle;
+}
+
+
 header{
     background-color: rgba(0, 0, 0, 0.3);
     height: 70px;height: 70px;
     width: 100%;
     position: sticky;
+    top: 0;
 }
 
 header div{
@@ -139,6 +198,7 @@ main section:last-of-type{
 
 section nav{
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 section nav ul li{
@@ -202,8 +262,95 @@ section div.flex > div{
 /* FOOTER */
 
 footer{
-    min-height: 70px;
+    height: 70px;
     background-color: var(--footer-color);
     position: relative;
     z-index: 30;
+}
+
+footer div.flex{
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+/* #player{
+    flex-grow: 1;
+} */
+
+footer i{
+    margin: 0 0.3rem;
+    color: white;
+}
+
+footer div.flex div{
+    padding: 0 4px;
+}
+
+.fa-heart,
+.fa-folder{
+    color: var(--icon-color);
+}
+
+footer i.fa-circle-play{
+    margin: 0 0.8rem;
+}
+
+#player{
+    flex-grow: 1;
+}
+
+#player span{
+    color: white;
+    font-size: 0.6rem;
+    font-weight: 600;
+    margin: 0.8rem;
+}
+
+#player-bar{
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    background-color: grey;
+    height: 3px;
+    vertical-align: middle;
+}
+
+#volume-bar{
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    background-color: grey;
+    height: 3px;
+    vertical-align: middle;
+}
+
+#player-bar div,
+#volume-bar div{
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: lightgrey;
+    height: 3px;
+    width: 70%;
+}
+
+footer img{
+    height: 40px;
+}
+
+div.text-left{
+    padding: 0 10px;
+}
+
+div.text-left h6:first-child{
+    color: white;
+}
+
+div.text-left h6:last-child {
+    color: var(--icon-color);
 }

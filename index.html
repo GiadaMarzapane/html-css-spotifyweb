@@ -16,13 +16,14 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
         
         <title>Spotify</title>
+        <link rel="icon" type="image/x-icon" href="img/logo-small.svg">
     </head>
     <body>
         
         <main>
             <section>
-                <aside>
-                    <div>
+                <aside class="flex">
+                    <div class="aside-top">
                         <img src="img/logo.svg" alt="Logo Spotify">
                         <ul>
                             <li>
@@ -38,36 +39,46 @@
                                 <a href="">La tua libreria</a>
                             </li>
                         </ul>
+                        <div>
+                            <h5>Playlist</h5>    
+                            <a id="crea-playlist" href="">
+                                <i class="fa-solid fa-plus"></i>
+                                Crea Playlist
+                            </a>                                     
+                            <ul>
+                                <li>
+                                    <a href="">Gomorra Soundtrack</a>
+                                </li>
+                                <li>
+                                    <a href="">Liberato Mix</a>
+                                </li>
+                                <li>
+                                    <a href="">Partenope Radio</a>
+                                </li>
+                                <li>
+                                    <a href="">Napoli Centro</a>
+                                </li>
+                                <li>
+                                    <a href="">I brani che mi piacciono</a>
+                                </li>
+                                <li>
+                                    <a href="">Yoga</a>
+                                </li>
+                                <li>
+                                    <a href="">Workout from Home</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div>
-                        <h5>Playlist</h5>    
-                        <a id="crea-playlist" href="">
-                            <i class="fa-solid fa-plus"></i>
-                            Crea Playlist
-                        </a>                                     
-                        <ul>
-                            <li>
-                                <a href="">Gomorra Soundtrack</a>
-                            </li>
-                            <li>
-                                <a href="">Liberato Mix</a>
-                            </li>
-                            <li>
-                                <a href="">Partenope Radio</a>
-                            </li>
-                            <li>
-                                <a href="">Napoli Centro</a>
-                            </li>
-                            <li>
-                                <a href="">I brani che mi piacciono</a>
-                            </li>
-                            <li>
-                                <a href="">Yoga</a>
-                            </li>
-                            <li>
-                                <a href="">Workout from Home</a>
-                            </li>
-                        </ul>
+                    <div class="aside-bottom">
+                        <div id="install">
+                            <img src="img/download.svg" alt="">
+                            <span>Installa app</span>
+                        </div>
+                        <div id="profile">                            
+                            <img src="img/profile.svg" alt="">                            
+                            <span>Giada Ortesta</span>
+                        </div>
                     </div>
                 </aside>
             </section>
@@ -203,8 +214,47 @@
         </main>
 
         <footer>
-            <div>
-                
+            <div class="flex">
+               <div class="flex">
+                    <img src="img/gaiola.JPG" alt="">
+                    <div class="text-left">
+                        <h6>Gaiola Portafortuna</h6>
+                        <h6>Liberato</h6>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-heart fa-sm"></i>
+                        <i class="fa-regular fa-folder fa-sm"></i>
+                    </div>
+                </div>
+            
+               <div id="player">
+                    <div>
+                        <i class="fa-solid fa-shuffle fa-sm"></i>
+                        <i class="fa-solid fa-backward-step fa-sm"></i>
+                        <i class="fa-regular fa-circle-play fa-xl"></i>
+                        <i class="fa-solid fa-forward-step fa-sm"></i>
+                        <i class="fa-solid fa-arrow-rotate-right fa-sm"></i>
+                    </div>
+                    <div>
+                        <span>
+                            3:34
+                        </span>
+                        <div id="player-bar">
+                            <div></div>
+                        </div>
+                        <span>
+                            4:56
+                        </span>
+                    </div>
+               </div>
+               <div>
+                <i class="fa-solid fa-list-ul fa-sm"></i>
+                <i class="fa-solid fa-desktop fa-sm"></i>
+                <i class="fa-solid fa-volume-high fa-sm"></i>
+                <div id="volume-bar">
+                    <div></div>
+                </div>
+               </div> 
             </div>
         </footer>
     </body>

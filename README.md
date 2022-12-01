@@ -41,3 +41,6 @@ pc:
 
 volume:
 <i class="fa-solid fa-volume-high"></i>
+
+circle:
+<i class="fa-solid fa-circle"></i>
