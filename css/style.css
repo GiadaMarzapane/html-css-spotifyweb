@@ -321,9 +321,14 @@ div.overlay{
     align-items: center;
 }
 
+#artisti-popolari div.overlay{
+    border-radius: 50%;
+}
+
 div.overlay i{
     color: white;
 }
+
 
 #creata-per-te h3,
 #artisti-popolari h3{
@@ -485,11 +490,9 @@ nav ul li:hover a{
 }
 
 #recent div.flex > div:hover div.overlay,
-#creata-per-te div.flex > div:hover div.overlay {
+#creata-per-te div.flex > div:hover div.overlay,
+#artisti-popolari div.flex>div:hover div.overlay {
     display: flex;
-}
-
-.cover-container:hover div.overlay i{
     cursor: pointer;
 }
 
