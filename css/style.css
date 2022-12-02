@@ -254,6 +254,10 @@ section nav{
 section nav ul li{
     display: inline-block;
     list-style: none;
+    padding: 0.06rem 0.5rem;
+}
+
+section nav ul li:first-of-type{
     padding: 0 0.5rem;
 }
 
@@ -263,6 +267,13 @@ section nav ul li a{
     font-weight: 600;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+section nav ul li div{
+    height: 2px;
+    background-color: rgb(84, 252, 84);
+    width: 35%;
+    margin: 0 auto;
 }
 
 #recent,
@@ -279,6 +290,10 @@ section div.flex > div{
     margin-right: 0.5rem;
 }
 
+.cover-container img{
+    display: block;
+}
+
 .title h5{
     color: white;
     margin: 0.4rem 0;
@@ -288,6 +303,26 @@ section div.flex > div{
     color: var(--icon-color);
     font-weight: 600;
     font-size: 0.7rem;
+}
+
+.cover-container{
+    position: relative;
+}
+
+div.overlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.overlay i{
+    color: white;
 }
 
 #creata-per-te h3,
@@ -434,12 +469,28 @@ i.fa-circle{
     font-size: 0.8rem;
 }
 
-.aside-top ul li:hover i,
 .aside-top ul li:hover a,
 .aside-top #crea-playlist:hover,
 .aside-bottom #install:hover span,
 nav ul li:hover a{
     color: white;
+}
+
+.aside-top div.main-navigation ul li:hover img{
+    filter:none;
+}
+
+.aside-top #crea-playlist:hover .fa-plus{
+    background-color: white;
+}
+
+#recent div.flex > div:hover div.overlay,
+#creata-per-te div.flex > div:hover div.overlay {
+    display: flex;
+}
+
+.cover-container:hover div.overlay i{
+    cursor: pointer;
 }
 
 div.text-left a:hover{
@@ -452,7 +503,7 @@ div.text-left a:hover{
     color: white;
 }
 
-.fa-circle-play:hover{
+footer .fa-circle-play:hover{
     font-size: 1.7rem;
 }
 
@@ -474,10 +525,11 @@ div.text-left a:hover{
     }
     section div.flex > div {
         width: calc((100% / 4) - 0.5rem);
+        margin-bottom: 1rem;
     }
 
-    #content-part nav ul{
-        line-height: 1.9rem;
+    #content-part nav ul li{
+        margin-bottom: 0.5rem;
     }
 }
 
