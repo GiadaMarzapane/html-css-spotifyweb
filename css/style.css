@@ -176,12 +176,13 @@ aside h5{
     object-fit: cover;
 }
 
-#install span{
+#install a{
     color: var(--icon-color);
     font-size: var(--primary-font);
     font-weight: 600;
     line-height: 18px;
     vertical-align: middle;
+    text-decoration: none;
 }
 
 #install{
@@ -476,9 +477,13 @@ i.fa-circle{
 
 .aside-top ul li:hover a,
 .aside-top #crea-playlist:hover,
-.aside-bottom #install:hover span,
+.aside-bottom #install:hover a,
 nav ul li:hover a{
     color: white;
+}
+
+.aside-bottom #install:hover img{
+    filter: none;
 }
 
 .aside-top div.main-navigation ul li:hover img{
