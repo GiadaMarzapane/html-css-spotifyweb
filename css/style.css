@@ -599,6 +599,10 @@ footer .fa-circle-play:hover{
         border-bottom: none;
     }
 
+    a#install-app{
+        display: none !important;
+    }
+
     footer div.flex div {
         padding: 0 2px;
     }
