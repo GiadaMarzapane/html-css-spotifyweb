@@ -213,11 +213,12 @@ aside h5{
 
 
 header{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgb(0, 0, 0);
     height: 70px;
     width: 100%;
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 header div{
@@ -236,6 +237,7 @@ header div{
     font-size: 0.7rem;
     font-weight: 500;
     margin-right: 20px;
+    transition: transform .2s;
 }
 
 main section:last-of-type{
@@ -289,10 +291,19 @@ section nav ul li div{
 section div.flex > div{
     width: calc((100% / 6) - 0.5rem);
     margin-right: 0.5rem;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+section div.flex > div:hover{
+    background-color: rgb(41, 41, 41);
+    cursor: pointer;
 }
 
 .cover-container img{
     display: block;
+    border-radius: 8px;
 }
 
 .title h5{
@@ -365,7 +376,7 @@ footer div.flex{
     text-align: center;
 }
 
-footer div.flex-right{
+footer .flex-right{
     display: flex;
     flex-wrap: wrap;
 }
@@ -468,11 +479,15 @@ i.fa-circle{
     top: -2px;
     right: 0px;
 }
+.sm-screen{
+    display: none;
+}
 
 /* HOVER */
 
 #button:hover{
-    font-size: 0.8rem;
+    /* font-size: 0.8rem; */
+    transform: scale(1.5);
 }
 
 .aside-top ul li:hover a,
@@ -604,7 +619,7 @@ footer .fa-circle-play:hover{
     }
 
     footer div.flex div {
-        padding: 0 2px;
+        padding-inline: 5px;
     }
 
     #player-bar{
@@ -613,6 +628,32 @@ footer .fa-circle-play:hover{
 
     footer a,
     footer i.fa-circle-play{
-        margin: 0 2px
+        margin-inline: 5px;
+    }
+
+    footer i.fa-desktop{
+        color: gray;
+    }
+
+    div#player,
+    div#other-command,
+    div.flex-right{
+        display: none;
+    }
+
+    .sm-screen{
+        display: block;
+    }
+
+    .bar{
+        padding: 0 !important;
+        position: absolute;
+        bottom: -7px;
+        left: -5px;
+        width: 100%
+    }
+
+    #player-bar{
+        width: 100%;
     }
 }
